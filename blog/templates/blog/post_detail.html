@@ -1,0 +1,26 @@
+{% extends 'blog/home.html' %}
+{% block content %}
+
+        {% load staticfiles %}
+    <header class="intro-header" style="background: gray url('{% static 'img/post-bg.jpg' %}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>{{ post.title }}</h1>
+                        <hr class="small">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <p>{{ post.content }}</p>
+                </div>
+            </div>
+        </div>
+    </article>
+{% endblock %}
